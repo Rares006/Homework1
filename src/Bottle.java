@@ -9,6 +9,7 @@ public class Bottle {
         this.totalCapacity = totalCapacity;
         this.availableLiquid = availableLiquid;
         this.status = status;
+
     }
 
     public Integer getTotalCapacity() {
@@ -57,9 +58,19 @@ public class Bottle {
     }
 
     public Object specigicAmount(int amountOfLiquid ){
-        int theRemainingAmount = availableLiquid - amountOfLiquid;
-        if(theRemainingAmount < 0){
-            return "The bottle is empty";
-        }else return "Your capacity is: " + theRemainingAmount;
+        if(getStatus().equals("Open")) {
+            int theRemainingAmount = availableLiquid - amountOfLiquid;
+            if (theRemainingAmount < 0) {
+                return "The bottle is empty";
+            } else return "Your capacity is: " + theRemainingAmount;
+        }else return "The bottle is closed";
+    }
+
+    public String toString() {
+        return "Bottle{ " +
+                "total capacity: '" + totalCapacity + '\'' +
+                ", available liquid : '" + availableLiquid + '\'' +
+                ", status: " + status +
+                '}';
     }
 }
