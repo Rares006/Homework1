@@ -20,4 +20,11 @@ public class Person {
     public String isMarried() {
         return married;
     }
+    public String toString() {
+        return "Person{ " +
+                "name: '" + name + '\'' +
+                ", age: '" + age + '\'' +
+                ", is married: " + married +
+                '}';
+    }
 }
