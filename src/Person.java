@@ -1,9 +1,9 @@
 public class Person {
     private String name;
     private Integer age;
-    private boolean married;
+    private String married;
 
-    public Person(String name, Integer age, boolean married) {
+    public Person(String name, Integer age, String married) {
         this.name = name;
         this.age = age;
         this.married = married;
@@ -17,7 +17,7 @@ public class Person {
         return age;
     }
 
-    public boolean isMarried() {
+    public String isMarried() {
         return married;
     }
 }
